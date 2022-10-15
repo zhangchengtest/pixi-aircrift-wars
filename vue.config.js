@@ -5,10 +5,9 @@ module.exports = {
   assetsDir: 'static/game/', // 相对于outputDir的静态资源(js、css、img、fonts)目录
   productionSourceMap: false,
   devServer: { // 代理
-    overlay: {
-      warnings: true,
-      errors: true
-    },
-    hot: false
+    host: '0.0.0.0',
+    public: '192.168.0.4:8080',//修改这里
+    https: false,
+    hotOnly: false,
   }
 };
